@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="Yang Wu — academic homepage, research group, collaborations and research internships. LLM reasoning, test-time scaling, and behavioral modeling." name="description"/>
+<title>Yang Wu | Academic Homepage</title>
+<style>
+    :root { --text:#252a31; --muted:#626b75; --faint:#8b929a; --border:#e3e7eb; --link:#244d77; --bg:#fff; --soft:#f5f7f9; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--text); font:15px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif; -webkit-font-smoothing:antialiased; }
+    a { color:var(--link); text-decoration:none; }
+    a:hover { text-decoration:underline; text-underline-offset:3px; }
+    button { font:inherit; }
+    a:focus-visible,button:focus-visible { outline:2px solid #547da8; outline-offset:3px; }
+    .wrap { max-width:920px; width:calc(100% - 64px); margin:0 auto; }
+    .header { border-bottom:1px solid var(--border); }
+    .header-inner { display:flex; align-items:center; justify-content:space-between; gap:22px; min-height:74px; }
+    .brand { color:var(--text); font-weight:700; font-size:18px; letter-spacing:-.2px; white-space:nowrap; }
+    .brand:hover { text-decoration:none; }
+    .header-right { display:flex; align-items:center; gap:24px; }
+    .nav { display:flex; align-items:center; flex-wrap:wrap; column-gap:18px; row-gap:5px; }
+    .nav a { font-size:13px; color:#4b5661; white-space:nowrap; }
+    .nav a[aria-current="page"] { color:#203e5c; font-weight:700; }
+    .lang { display:flex; align-items:center; gap:3px; border:1px solid var(--border); border-radius:5px; padding:3px; white-space:nowrap; }
+    .lang button { border:0; background:transparent; color:#717b84; padding:2px 9px; font-size:12px; cursor:pointer; border-radius:3px; line-height:25px; }
+    .lang button[aria-pressed="true"] { background:#edf1f5; color:#23496f; font-weight:700; }
+    section { scroll-margin-top:30px; }
+    .intro { display:grid; grid-template-columns:minmax(0,1fr) 148px; gap:46px; align-items:start; padding:62px 0 48px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font-size:35px; letter-spacing:-.9px; font-weight:700; line-height:1.3; margin-bottom:8px; }
+    .affiliation { font-size:14px; line-height:1.8; color:var(--muted); margin-bottom:22px; }
+    .intro p.bodytext { font-size:14px; max-width:660px; line-height:1.85; margin:0 0 10px; }
+    .links { display:flex; flex-wrap:wrap; gap:18px; margin-top:17px; font-size:13px; }
+    .links a { font-weight:600; }
+    .portrait { width:148px; height:175px; border:1px solid var(--border); border-radius:3px; background:#f1f3f5; display:flex; justify-content:center; align-items:center; color:#6d7c8b; font-size:33px; letter-spacing:1px; font-family:Georgia,serif; overflow:hidden; }
+    .portrait img { width:100%; height:100%; object-fit:cover; }
+    .section { border-top:1px solid var(--border); padding:30px 0 35px; }
+    h2 { font-size:19px; font-weight:700; letter-spacing:-.25px; line-height:1.35; margin-bottom:17px; }
+    h3 { font-weight:700; font-size:15px; line-height:1.6; }
+    .research-list { margin:0; padding-left:21px; }
+    .research-list li { margin:0 0 10px; padding-left:2px; }
+    .research-list li:last-child { margin-bottom:0; }
+    .research-list span { color:var(--muted); }
+    .subheading { margin:19px 0 16px; font-size:15px; font-weight:700; }
+    .subheading:first-of-type { margin-top:0; }
+    .pub-feature { display:grid; grid-template-columns:54px minmax(0,1fr); gap:18px; margin:0 0 25px; }
+    .year { color:var(--faint); font-size:13px; font-variant-numeric:tabular-nums; padding-top:4px; }
+    .venue { color:#67717c; font-weight:650; font-size:12px; margin:0 0 3px; }
+    .pub-feature h3 { font-size:15px; font-weight:700; margin:0 0 2px; line-height:1.55; }
+    .authors { font-size:13px; color:var(--muted); line-height:1.65; margin:0 0 5px; }
+    .authors strong { color:var(--text); font-weight:650; }
+    .summary { color:#4f5b67; font-size:13px; margin:0 0 6px; line-height:1.75; }
+    .paper-links { font-size:12px; font-weight:650; display:flex; gap:15px; }
+    .paper-links a { white-space:nowrap; }
+    .other-pubs { list-style:none; padding:0; margin:0; }
+    .other-pubs li { display:grid; grid-template-columns:54px minmax(0,1fr); gap:18px; margin-bottom:8px; }
+    .other-pubs p { margin:0; font-size:13.2px; line-height:1.7; }
+    .other-pubs .other-title { font-weight:650; color:var(--text); }
+    .other-pubs .other-meta { color:var(--muted); }
+    .contact { font-size:14px; color:var(--muted); margin:0; }
+    .page-view[hidden] { display:none !important; }
+    .inner-page-head { padding:56px 0 34px; }
+    .inner-page-head h1 { font-size:31px; margin:0 0 10px; }
+    .inner-page-kicker { font-size:12px; letter-spacing:.055em; text-transform:uppercase; color:var(--muted); margin:0 0 12px; }
+    .inner-page-lead { font-size:14px; line-height:1.9; color:#4b5661; max-width:770px; margin:0; }
+    .compact-text { font-size:14px; line-height:1.9; margin:0 0 14px; max-width:780px; }
+    .focus-list { padding:0; list-style:none; margin:0; }
+    .focus-list li { padding:0 0 16px; margin:0 0 16px; border-bottom:1px solid #eef0f3; }
+    .focus-list li:last-child { border-bottom:0; margin-bottom:0; padding-bottom:0; }
+    .focus-list strong { font-size:14px; display:block; margin:0 0 4px; }
+    .focus-list p { font-size:13.5px; line-height:1.8; color:var(--muted); margin:0; }
+    .people { border-top:1px solid var(--border); }
+    .person { display:grid; grid-template-columns:172px minmax(0,1fr); align-items:start; gap:20px; padding:15px 0; border-bottom:1px solid var(--border); }
+    .person .person-name { font-size:14px; font-weight:700; }
+    .person .person-info { color:var(--muted); font-size:13px; line-height:1.8; }
+    .person .person-info strong { color:var(--text); font-weight:600; }
+    .edit-note { font-size:12px; color:var(--faint); margin:12px 0 0; }
+    .minimal-bullets { padding-left:20px; margin:9px 0 15px; }
+    .minimal-bullets li { font-size:13.5px; line-height:1.9; padding-left:2px; margin-bottom:5px; }
+    .call-email { display:inline-block; margin-top:5px; font-size:14px; font-weight:650; }
+    .footer { border-top:1px solid var(--border); padding:23px 0 38px; color:#8a9198; font-size:11.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+    @media (max-width:680px) {
+      .wrap { width:calc(100% - 36px); }
+      .header-inner { min-height:64px; flex-wrap:wrap; gap:3px 12px; padding:12px 0; }
+      .header-right { margin-left:auto; gap:12px; }
+      .nav { column-gap:13px; row-gap:3px; }
+      .nav a { font-size:11.5px; }
+      .header-inner { align-items:start; }
+      .header-right { align-items:flex-start; }
+      .inner-page-head { padding:37px 0 25px; }
+      .inner-page-head h1 { font-size:27px; }
+      .person { grid-template-columns:1fr; gap:2px; padding:13px 0; }
+      .intro { grid-template-columns:minmax(0,1fr) 90px; gap:16px; padding:39px 0 34px; }
+      .portrait { width:90px; height:110px; font-size:25px; }
+      h1 { font-size:30px; }
+      .affiliation { font-size:12.5px; margin-bottom:15px; }
+      .intro p.bodytext { font-size:13.5px; }
+      .section { padding:26px 0 29px; }
+    }
+    @media (max-width:390px) {
+      .nav { column-gap:10px; }
+      .nav a { font-size:10.5px; }
+      .lang button { padding:1px 6px; }
+      .portrait { width:76px; height:94px; }
+      .intro { grid-template-columns:1fr 76px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+  
+/* Compact publications and unobtrusive links */
+.pub-list { margin: 0; }
+.pub-row { display:grid; grid-template-columns:54px minmax(0,1fr); gap:18px; padding:10px 0 11px; border-bottom:1px solid #edf0f2; }
+.pub-row:first-child { padding-top:2px; }
+.pub-row:last-child { border-bottom:0; }
+.pub-year { color:var(--faint); font-size:12.5px; padding-top:2px; font-variant-numeric:tabular-nums; }
+.pub-main { min-width:0; }
+.pub-title { font-size:14px; line-height:1.5; font-weight:650; color:#262d34; }
+.pub-meta { color:var(--muted); font-size:12.7px; line-height:1.6; margin-top:2px; }
+.pub-meta .venue-label { color:#4f5e6d; }
+.pub-links { display:inline-flex; flex-wrap:wrap; column-gap:10px; font-size:12px; font-weight:600; margin-left:8px; }
+.pub-links a { white-space:nowrap; }
+.pub-authors { white-space:normal; }
+#publications .subheading { margin-top:19px; margin-bottom:9px; }
+#publications .subheading:first-of-type { margin-top:0; }
+.inline-action { margin-top:10px; padding:1px 0; border:0; background:transparent; color:var(--link); font-size:13px; font-weight:600; cursor:pointer; }
+.inline-action:hover { text-decoration:underline; text-underline-offset:3px; }
+.inline-action[hidden] { display:none; }
+.teaser { padding-top:27px; padding-bottom:28px; }
+.teaser h2 { margin-bottom:9px; }
+.teaser p { max-width:800px; margin:0 0 8px; font-size:13.7px; color:#535e68; line-height:1.85; }
+.detail-link { font-size:13px; font-weight:650; }
+.person-name a { color:inherit; }
+@media(max-width:680px) { .pub-row { grid-template-columns:40px minmax(0,1fr); gap:9px; padding:9px 0; } .pub-title { font-size:13.3px; } .pub-links { margin-left:0; margin-top:1px; } .pub-links a { margin-right:7px; } }
+</style>
+</head>
+<body>
+<header class="header">
+<div class="wrap header-inner">
+<a class="brand" data-profile="name" href="#top">Yang Wu</a>
+<div class="header-right">
+<nav aria-label="Site navigation" class="nav">
+<a data-edit="nav.home" href="#about">Home</a>
+<a data-edit="nav.research" href="#research">Research</a>
+<a data-edit="nav.publications" href="#publications">Publications</a>
+<a data-edit="nav.group" href="#group">Group</a>
+<a data-edit="nav.join" href="#join">Join &amp; Collaborate</a>
+</nav>
+<div aria-label="Language / 语言" class="lang" role="group">
+<button aria-pressed="true" id="btn-en" type="button">EN</button>
+<button aria-pressed="false" id="btn-zh" type="button">中文</button>
+</div>
+</div>
+</div>
+</header>
+<main class="wrap" id="top">
+<div class="page-view" id="home-view">
+<section aria-labelledby="name" class="intro" id="about">
+<div>
+<h1 data-profile="name" id="name">Yang Wu</h1>
+<p class="affiliation" data-edit="home.affiliation">Ph.D. Candidate · Institute of Automation, Chinese Academy of Sciences</p>
+<p class="bodytext" data-edit="home.intro_reasoning">My research focuses on large language model (LLM) reasoning and test-time scaling, particularly process guidance, repeated sampling, and search-based inference.</p>
+<p class="bodytext" data-edit="home.intro_behavior">I am also interested in learning behavioral models from social experiments, with applications to behavioral prediction and social simulation.</p>
+<div class="links"><a data-contact="email" data-edit="home.email_label" href="mailto:wuyang2022@ia.ac.cn">Email</a><a data-edit="home.pubs_label" href="#publications">Publications</a></div>
+</div>
+<div aria-label="Portrait placeholder" class="portrait" id="profile-portrait" title="Replace with your own portrait"><!-- Upload avatar.jpg and replace YW with <img src="avatar.jpg" alt="Yang Wu"> -->YW</div>
+</section>
+<section aria-labelledby="research-title" class="section" id="research">
+<h2 data-edit="research.heading" id="research-title">Research Interests</h2>
+<ul class="research-list">
+<li><strong data-edit="research.reasoning_name">LLM Reasoning and Test-Time Scaling.</strong> <span data-edit="research.reasoning_detail">Process-guided reasoning, self-consistency, answer distributions, and parallel search.</span></li>
+<li><strong data-edit="research.social_name">LLM-based Behavioral Modeling and Social Simulation.</strong> <span data-edit="research.social_detail">Learning behavioral patterns from experimental data, generalization, and causal-effect prediction.</span></li>
+</ul>
+</section>
+<section aria-labelledby="pub-title" class="section" id="publications">
+<h2 data-edit="publications.heading" id="pub-title">Publications</h2>
+<h3 class="subheading" data-edit="publications.selected">Selected Publications</h3><div class="pub-list" id="selected-publications"></div>
+
+
+<h3 class="subheading" data-edit="publications.other">Other Publications</h3><div class="pub-list" id="other-publications"></div><button aria-expanded="false" class="inline-action" hidden="" id="publications-toggle" type="button">Show more publications ↓</button>
+
+</section>
+
+<section aria-labelledby="group-preview-heading" class="section teaser" id="group-preview">
+<h2 data-edit="home.group_heading" id="group-preview-heading">Research Group</h2>
+<p data-edit="home.group_description">We are a small, student-driven team of four researchers working with a faculty advisor on frontier questions in LLM reasoning, test-time scaling, and behavioral modeling.</p>
+<a class="detail-link" data-edit="home.group_cta" href="#group">Meet the group <span aria-hidden="true">→</span></a>
+</section>
+<section aria-labelledby="join-preview-heading" class="section teaser" id="join-preview">
+<h2 data-edit="home.join_heading" id="join-preview-heading">Join &amp; Collaborate</h2>
+<p data-edit="home.join_description">We welcome research collaborations and inquiries from students interested in research internships. We especially value original ideas, complementary expertise, and careful experimentation.</p>
+<a class="detail-link" data-edit="home.join_cta" href="#join">Explore opportunities <span aria-hidden="true">→</span></a>
+</section>
+<section aria-labelledby="contact-title" class="section" id="contact">
+<h2 data-edit="contact.heading" id="contact-title">Contact</h2>
+<p class="contact"><span data-edit="contact.email_label">Email:</span> <a data-contact="email" data-profile="email" href="mailto:wuyang2022@ia.ac.cn">wuyang2022@ia.ac.cn</a></p>
+</section>
+</div><!-- end of home view -->
+<!-- Research group: four student researchers and one faculty advisor. -->
+<div class="page-view" hidden="" id="group-view">
+<section aria-labelledby="group-title" class="inner-page-head" id="group">
+<p class="inner-page-kicker" data-edit="group.kicker">A small team pursuing frontier research</p>
+<h1 data-edit="group.heading" id="group-title">Research Group</h1>
+<p class="inner-page-lead" data-edit="group.lead">We are a small, student-driven research team of four researchers working under the guidance of a faculty advisor. We focus on frontier questions in large language models, aiming to develop original methods and empirical understanding rather than simply building applications.</p>
+</section>
+<section aria-labelledby="group-focus-title" class="section">
+<h2 data-edit="group.directions_heading" id="group-focus-title">Research Directions</h2>
+<ul class="focus-list">
+<li>
+<strong data-edit="group.reasoning_heading">1. LLM Reasoning &amp; Test-Time Scaling</strong>
+<p data-edit="group.reasoning_description">How can language models reason more effectively with additional inference-time computation? We investigate diverse reasoning trajectories, self-consistency and answer distributions, search-based inference, and the limits of test-time scaling.</p>
+</li>
+<li>
+<strong data-edit="group.social_heading">2. Behavioral Modeling &amp; Social Simulation</strong>
+<p data-edit="group.social_description">Can language models learn transferable behavioral patterns from limited human observations? We study learning from social experiments, generalization across people and interventions, and the reliability of behavioral and treatment-effect predictions.</p>
+</li>
+</ul>
+</section>
+<section aria-labelledby="group-values-title" class="section">
+<h2 data-edit="group.philosophy_heading" id="group-values-title">Research Philosophy</h2>
+<p class="compact-text" data-edit="group.philosophy">We value important questions, independent thinking, and rigorous empirical evidence. Our work aims to connect scientific understanding with methodological advances, and we favor sustained progress on a few focused projects over a large collection of loosely connected ideas.</p>
+</section>
+<section aria-labelledby="people-title" class="section">
+<h2 data-edit="group.people_heading" id="people-title">People</h2>
+<div class="people" id="team-members"></div>
+<p class="edit-note" data-edit="group.people_note">Member names and detailed profiles will be added after confirmation.</p>
+</section>
+</div><!-- end of group view -->
+<!-- Collaborations and internship inquiries. This is not a formal employment advertisement. -->
+<div class="page-view" hidden="" id="join-view">
+<section aria-labelledby="join-title" class="inner-page-head" id="join">
+<p class="inner-page-kicker" data-edit="join.kicker">Work together on meaningful research</p>
+<h1 data-edit="join.heading" id="join-title">Join &amp; Collaborate</h1>
+<p class="inner-page-lead" data-edit="join.lead">We welcome conversations with researchers from different backgrounds and inquiries from students interested in research internships. We are especially excited by collaborations that bring together fresh questions, complementary expertise, and careful experimentation.</p>
+</section>
+<section aria-labelledby="collab-title" class="section">
+<h2 data-edit="join.collaboration_heading" id="collab-title">Research Collaboration</h2>
+<p class="compact-text" data-edit="join.collaboration_text1">We are interested in collaborations on LLM reasoning, inference-time computation, and data-grounded behavioral modeling. Interdisciplinary work connecting machine learning with social science, behavioral research, and experimental methodology is particularly welcome.</p>
+<p class="compact-text" data-edit="join.collaboration_text2">If you see a concrete connection to our research, feel free to write with a brief introduction and the question you would like to explore together.</p>
+</section>
+<section aria-labelledby="intern-title" class="section">
+<h2 data-edit="join.internships_heading" id="intern-title">Research Internships</h2>
+<p class="compact-text" data-edit="join.internships_intro">We welcome motivated students who want to work on frontier research problems in LLMs. Depending on project needs and mutual fit, prospective interns may contribute to problem formulation, paper reading, model experiments, and evaluation.</p>
+<h3 class="subheading" data-edit="join.qualities_heading">What we value</h3>
+<ul class="minimal-bullets">
+<li data-edit="join.quality1">Curiosity about scientific questions and willingness to think independently.</li>
+<li data-edit="join.quality2">A solid foundation in machine learning, with practical Python / PyTorch experience or equivalent research skills.</li>
+<li data-edit="join.quality3">Careful experimentation, clear communication, and commitment to reproducible results.</li>
+</ul>
+<h3 class="subheading" data-edit="join.how_heading">How to reach out</h3>
+<p class="compact-text" data-edit="join.how_text">Send a short email introducing yourself, your research interests, and relevant experience. A CV and links to previous projects or code are helpful. Please use the subject “Research Internship” or “Research Collaboration” so your message is easy to identify.</p>
+<a class="call-email" data-contact="email" href="mailto:wuyang2022@ia.ac.cn">wuyang2022@ia.ac.cn</a>
+</section>
+</div><!-- end of join view -->
+</main>
+<footer class="wrap footer"><span data-footer="copyright">© 2026 Yang Wu</span><span data-edit="footer.updated">Last updated: November 2026</span></footer>
+
+<script src="site-data.js"></script><script>
+(() => {
+  'use strict';
+  const D = window.SITE_DATA;
+  if (!D) {
+    const msg = document.createElement('p');
+    msg.style.cssText='color:#8b2830;font-size:13px';
+    msg.textContent='Missing site-data.js. Upload index.html and site-data.js to the same GitHub repository folder.';
+    document.querySelector('#publications').append(msg);
+    return;
+  }
+  const $ = selector => document.querySelector(selector);
+  const make = (tag, className, text) => {
+    const el = document.createElement(tag);
+    if (className) el.className = className;
+    if (text !== undefined) el.textContent = String(text ?? '');
+    return el;
+  };
+  let currentLanguage = new URLSearchParams(location.search).get('lang') === 'zh' ? 'zh' : 'en';
+  let showAll = false;
+
+  function validUrl(raw) {
+    if (!raw || typeof raw !== 'string') return '';
+    try { const url = new URL(raw, location.href); return ['https:','http:'].includes(url.protocol) ? url.href : ''; }
+    catch (_) { return ''; }
+  }
+  function renderProfiles() {
+    const p = D.profile || {};
+    const name = currentLanguage === 'zh' && p.nameZh ? p.nameZh : (p.name || 'Yang Wu');
+    $('#name').textContent = name;
+    $('.brand').textContent = p.name || name;
+    document.querySelectorAll('a[data-contact="email"]').forEach(el => {
+      if (p.email) el.href = 'mailto:' + p.email;
+      if (el.hasAttribute('data-profile')) el.textContent = p.email || '';
+    });
+    const portrait = $('#profile-portrait');
+    portrait.replaceChildren();
+    if (p.portrait && !/^\s*(?:javascript|data):/i.test(p.portrait)) {
+      const img = make('img'); img.src = p.portrait; img.alt = p.name || 'Portrait'; portrait.append(img);
+    } else portrait.textContent = (p.name || 'YW').split(/\s+/).map(x => x[0] || '').slice(0,2).join('').toUpperCase();
+    const profileLinks = $('.links');
+    profileLinks.querySelectorAll('[data-profile-link]').forEach(el=>el.remove());
+    [['scholarUrl','Google Scholar'],['githubUrl','GitHub'],['cvUrl','CV']].forEach(([field,label]) => {
+      const url = validUrl(p[field]);
+      if (url) {const a=make('a',null,label);a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('data-profile-link',field);profileLinks.append(a);}
+    });
+    const footer = $('[data-footer="copyright"]');
+    if (footer) footer.textContent = '© 2026 ' + (p.name || 'Yang Wu');
+  }
+  function renderTexts() {
+    for (const element of document.querySelectorAll('[data-edit]')) {
+      const key = element.getAttribute('data-edit');
+      const value = (D.texts || {})[key];
+      if (value && typeof value[currentLanguage] === 'string') element.textContent = value[currentLanguage];
+    }
+  }
+  function publicationRow(pub) {
+    const row = make('article','pub-row');
+    row.append(make('span','pub-year',pub.year || ''));
+    const main=make('div','pub-main');
+    const line=make('div','pub-line');
+    line.append(make('span','pub-title',pub.title || 'Untitled'));
+    const links=make('span','pub-links');
+    [['paperUrl','Paper'],['pdfUrl','PDF'],['codeUrl','Code']].forEach(([field,label]) => {
+      const url=validUrl(pub[field]);if(!url)return;
+      const anchor=make('a',null,'['+label+']');anchor.href=url;anchor.target='_blank';anchor.rel='noopener noreferrer';links.append(anchor);
+    });
+    line.append(links);main.append(line);
+    const meta=make('div','pub-meta');
+    meta.append(make('span','pub-authors',pub.authors || ''));
+    if(pub.venue) {meta.append(document.createTextNode(' · '));meta.append(make('span','venue-label',pub.venue));}
+    main.append(meta);row.append(main);return row;
+  }
+  function renderPublications() {
+    const all=Array.isArray(D.publications) ? D.publications : [];
+    const selected=all.filter(p=>p.selected);
+    const others=all.filter(p=>!p.selected);
+    $('#selected-publications').replaceChildren(...selected.map(publicationRow));
+    const n=Math.max(0,Number(D.settings?.otherInitiallyVisible) || 2);
+    $('#other-publications').replaceChildren(...(showAll?others:others.slice(0,n)).map(publicationRow));
+    const heading=document.querySelector('[data-edit="publications.other"]');
+    heading.hidden = others.length === 0;
+    const toggle=$('#publications-toggle');
+    const hasExtra=others.length>n;
+    toggle.hidden=!hasExtra;
+    toggle.setAttribute('aria-expanded',String(hasExtra && showAll));
+    toggle.textContent=showAll ? (currentLanguage==='zh'?'收起论文 ↑':'Show fewer publications ↑') :
+      (currentLanguage==='zh'?'展开更多论文（'+(others.length-n)+' 篇）↓':'Show more publications ('+(others.length-n)+') ↓');
+  }
+  function renderPeople() {
+    const container=$('#team-members');
+    const people=Array.isArray(D.people) ? D.people : [];
+    const cards=people.map(p=>{
+      const person=make('div','person');
+      const role=make('div','person-name',p.role?.[currentLanguage] || p.role?.en || '');
+      const info=make('div','person-info');
+      const name=currentLanguage==='zh' ? p.nameZh || p.name : p.name || p.nameZh;
+      const url=validUrl(p.url);
+      const strong=make('strong',null,name || '');
+      if(url) {const a=make('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.append(strong);info.append(a);}
+      else info.append(strong);
+      if (p.detail?.[currentLanguage]) info.append(document.createTextNode(' · '+p.detail[currentLanguage]));
+      person.append(role,info);return person;
+    });
+    container.replaceChildren(...cards);
+  }
+  function setLanguage(lang,changeUrl=true) {
+    currentLanguage=lang==='zh'?'zh':'en';
+    document.documentElement.lang=currentLanguage==='zh'?'zh-CN':'en';
+    document.title=currentLanguage==='zh'?'Yang Wu | 学术主页':'Yang Wu | Academic Homepage';
+    $('#btn-en').setAttribute('aria-pressed',String(currentLanguage==='en'));
+    $('#btn-zh').setAttribute('aria-pressed',String(currentLanguage==='zh'));
+    renderTexts();renderProfiles();renderPublications();renderPeople();
+    if(changeUrl){const url=new URL(location.href);if(currentLanguage==='zh') url.searchParams.set('lang','zh');else url.searchParams.delete('lang');
+      try {history.replaceState(null,'',url.pathname+url.search+url.hash);}catch(_) {}}
+  }
+  $('#btn-en').addEventListener('click',()=>setLanguage('en'));
+  $('#btn-zh').addEventListener('click',()=>setLanguage('zh'));
+  $('#publications-toggle').addEventListener('click',()=>{showAll=!showAll;renderPublications();});
+  const views={home:$('#home-view'),group:$('#group-view'),join:$('#join-view')};
+  const navLinks=Array.from(document.querySelectorAll('.nav a'));
+  function showView() {
+    const hash=(location.hash || '#about').toLowerCase();
+    const view=hash==='#group'?'group':hash==='#join'?'join':'home';
+    Object.entries(views).forEach(([key,el])=>el.hidden=key!==view);
+    navLinks.forEach(a=>{
+      const active=a.getAttribute('href')===hash || (hash==='#top' && a.getAttribute('href')==='#about');
+      if(active) a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    requestAnimationFrame(()=>{
+      const target=document.getElementById(hash.slice(1));
+      if(target && !target.closest('[hidden]'))target.scrollIntoView({behavior:'auto',block:'start'});
+      else window.scrollTo(0,0);
+    });
+  }
+  window.addEventListener('hashchange',showView);
+  setLanguage(currentLanguage,false);showView();
+})();
+</script></body>
+</html>
