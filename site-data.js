@@ -1,16 +1,16 @@
-/* EDITABLE SITE CONTENT. Use editor.html to make changes without editing code. */
+/* Site content exported from editor.html */
 window.SITE_DATA = {
   "profile": {
     "name": "Yang Wu",
-    "nameZh": "吴洋",
+    "nameZh": "吴杨",
     "email": "wuyang2022@ia.ac.cn",
-    "portrait": "",
+    "portrait": "C:\\wuyang_temp\\悲催研究生\\202609教职简历\\帅照.jpg",
     "scholarUrl": "",
     "githubUrl": "",
     "cvUrl": ""
   },
   "settings": {
-    "otherInitiallyVisible": 2
+    "otherInitiallyVisible": 3
   },
   "texts": {
     "nav.home": {
@@ -26,7 +26,7 @@ window.SITE_DATA = {
       "zh": "论文"
     },
     "nav.group": {
-      "en": "Group",
+      "en": "Team",
       "zh": "团队"
     },
     "nav.join": {
@@ -102,8 +102,8 @@ window.SITE_DATA = {
       "zh": "研究团队"
     },
     "group.lead": {
-      "en": "We are a small, student-driven research team of four researchers working under the guidance of a faculty advisor. We focus on frontier questions in large language models, aiming to develop original methods and empirical understanding rather than simply building applications.",
-      "zh": "我们是由四名学生研究者组成、在导师指导下开展研究的小组。团队聚焦大语言模型领域的前沿科学问题，重视原创方法与实证认识，而不止于应用系统的搭建。"
+      "en": "We are a small, PhD student-driven research team working under the guidance of a faculty advisor. We focus on frontier questions in large language models, aiming to develop original methods and empirical understanding rather than simply building applications.",
+      "zh": "我们是一支由博士生组成、在导师指导下开展研究的小组。团队聚焦大语言模型领域的前沿科学问题，重视原创方法与实证认识，而不止于应用系统的搭建。"
     },
     "group.directions_heading": {
       "en": "Research Directions",
@@ -202,12 +202,12 @@ window.SITE_DATA = {
       "zh": "最后更新：2026 年 11 月"
     },
     "home.group_heading": {
-      "en": "Research Group",
+      "en": "Research Team",
       "zh": "研究团队"
     },
     "home.group_description": {
-      "en": "We are a small, student-driven team of four researchers working with a faculty advisor on frontier questions in LLM reasoning, test-time scaling, and behavioral modeling.",
-      "zh": "我们是由四名学生研究者和一位指导教师组成的小型团队，专注于大模型推理、测试时扩展及行为建模领域的前沿研究问题。"
+      "en": "We are a small, PhD student-driven research team working under the guidance of a faculty advisor. We focus on frontier questions in large language models, aiming to develop original methods and empirical understanding rather than simply building applications.",
+      "zh": "我们是一支由博士生组成、在导师指导下开展研究的小组。团队聚焦大语言模型领域的前沿科学问题，重视原创方法与实证认识。"
     },
     "home.group_cta": {
       "en": "Meet the group →",
@@ -243,8 +243,8 @@ window.SITE_DATA = {
       "authors": "Yang Wu, Zhicheng Zhang, Xun Pang, Xiaolong Zheng",
       "venue": "CIKM 2026",
       "selected": true,
-      "paperUrl": "https://doi.org/10.1145/3799682.3841061",
-      "pdfUrl": "",
+      "paperUrl": "https://dl.acm.org/doi/10.1145/3799682.3841061",
+      "pdfUrl": "https://dl.acm.org/doi/epdf/10.1145/3799682.3841061",
       "codeUrl": ""
     },
     {
@@ -253,15 +253,45 @@ window.SITE_DATA = {
       "authors": "Yang Wu, Xiaolong Zheng, Daniel Dajun Zeng",
       "venue": "IEEE ISI 2025",
       "selected": false,
-      "paperUrl": "https://doi.org/10.1109/ISI65680.2025.11201116",
+      "paperUrl": "https://ieeexplore.ieee.org/document/11201116",
+      "pdfUrl": "",
+      "codeUrl": ""
+    },
+    {
+      "year": "2026",
+      "title": "AI for Science: Progress, Challenges and Perspectives",
+      "authors": "Yongjun Xu, Zezhi Shao, et.al",
+      "venue": "The Innovation",
+      "selected": false,
+      "paperUrl": "https://www.sciencedirect.com/science/article/pii/S2666675826002778",
+      "pdfUrl": "",
+      "codeUrl": ""
+    },
+    {
+      "year": "2024",
+      "title": "构建数智安全新格局保障新发展格局",
+      "authors": "杨晓光, 吴杨, 张兴伟, 郑晓龙",
+      "venue": "中国科学院院刊",
+      "selected": false,
+      "paperUrl": "https://doi.org/10.16418/j.issn.1000-3045.20231207001",
+      "pdfUrl": "",
+      "codeUrl": ""
+    },
+    {
+      "year": "2024",
+      "title": "Social Intelligence Enhancement Methods for LLM Agents Based on Retrieval-Augmented Generation",
+      "authors": "Zhicheng Zhang, Yang Wu, Xiaolong Zheng, Daniel Dajun Zeng",
+      "venue": "2024 China Automation Congress (CAC)",
+      "selected": false,
+      "paperUrl": "https://ieeexplore.ieee.org/document/10865026",
       "pdfUrl": "",
       "codeUrl": ""
     }
   ],
   "people": [
     {
-      "name": "Name to be added",
-      "nameZh": "姓名待补充",
+      "name": "Xiaolong Zheng",
+      "nameZh": "郑晓龙",
       "role": {
         "en": "Faculty Advisor",
         "zh": "指导教师"
@@ -273,19 +303,19 @@ window.SITE_DATA = {
     },
     {
       "name": "Yang Wu",
-      "nameZh": "吴洋",
+      "nameZh": "吴杨",
       "role": {
         "en": "Ph.D. Candidate",
         "zh": "博士研究生"
       },
       "detail": {
-        "en": "Student research coordination; LLM reasoning and behavioral modeling",
-        "zh": "学生研究协调；大模型推理与行为建模"
+        "en": "LLM reasoning and behavioral modeling; LLM Social Simulation",
+        "zh": "大模型推理与行为建模; 大模型社会模拟"
       }
     },
     {
-      "name": "Name to be added",
-      "nameZh": "姓名待补充",
+      "name": "Zhicheng Zhang",
+      "nameZh": "张志成",
       "role": {
         "en": "Ph.D. Student",
         "zh": "博士研究生"
@@ -293,30 +323,6 @@ window.SITE_DATA = {
       "detail": {
         "en": "Research on diverse reasoning and test-time scaling",
         "zh": "多样化推理与测试时扩展研究"
-      }
-    },
-    {
-      "name": "Name to be added",
-      "nameZh": "姓名待补充",
-      "role": {
-        "en": "Student Researcher",
-        "zh": "学生研究成员"
-      },
-      "detail": {
-        "en": "Machine learning experiments and research engineering",
-        "zh": "机器学习实验与研究工程"
-      }
-    },
-    {
-      "name": "Name to be added",
-      "nameZh": "姓名待补充",
-      "role": {
-        "en": "Student Researcher",
-        "zh": "学生研究成员"
-      },
-      "detail": {
-        "en": "Research exploration and empirical evaluation",
-        "zh": "研究探索与实证评估"
       }
     }
   ]
