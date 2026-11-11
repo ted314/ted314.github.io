@@ -10,7 +10,7 @@ window.SITE_DATA = {
     "cvUrl": ""
   },
   "settings": {
-    "otherInitiallyVisible": 3
+    "otherInitiallyVisible": 4
   },
   "texts": {
     "nav.home": {
@@ -31,7 +31,7 @@ window.SITE_DATA = {
     },
     "nav.join": {
       "en": "Join & Collaborate",
-      "zh": "合作与招聘"
+      "zh": "合作与实习"
     },
     "home.affiliation": {
       "en": "Ph.D. Candidate · Institute of Automation, Chinese Academy of Sciences",
@@ -215,7 +215,7 @@ window.SITE_DATA = {
     },
     "home.join_heading": {
       "en": "Join & Collaborate",
-      "zh": "合作与招聘"
+      "zh": "合作与实习"
     },
     "home.join_description": {
       "en": "We welcome research collaborations and inquiries from students interested in research internships. We especially value original ideas, complementary expertise, and careful experimentation.",
@@ -252,7 +252,7 @@ window.SITE_DATA = {
       "title": "Chain-of-Ethics: Defending Against Narrative Camouflage Attacks in LLM Moral Judgment",
       "authors": "Yang Wu, Xiaolong Zheng, Daniel Dajun Zeng",
       "venue": "IEEE ISI 2025",
-      "selected": false,
+      "selected": true,
       "paperUrl": "https://ieeexplore.ieee.org/document/11201116",
       "pdfUrl": "",
       "codeUrl": ""
@@ -269,21 +269,21 @@ window.SITE_DATA = {
     },
     {
       "year": "2024",
-      "title": "构建数智安全新格局保障新发展格局",
-      "authors": "杨晓光, 吴杨, 张兴伟, 郑晓龙",
-      "venue": "中国科学院院刊",
-      "selected": false,
-      "paperUrl": "https://doi.org/10.16418/j.issn.1000-3045.20231207001",
-      "pdfUrl": "",
-      "codeUrl": ""
-    },
-    {
-      "year": "2024",
       "title": "Social Intelligence Enhancement Methods for LLM Agents Based on Retrieval-Augmented Generation",
       "authors": "Zhicheng Zhang, Yang Wu, Xiaolong Zheng, Daniel Dajun Zeng",
       "venue": "2024 China Automation Congress (CAC)",
       "selected": false,
       "paperUrl": "https://ieeexplore.ieee.org/document/10865026",
+      "pdfUrl": "",
+      "codeUrl": ""
+    },
+    {
+      "year": "2024",
+      "title": "构建数智安全新格局保障新发展格局",
+      "authors": "杨晓光, 吴杨, 张兴伟, 郑晓龙",
+      "venue": "中国科学院院刊",
+      "selected": false,
+      "paperUrl": "https://doi.org/10.16418/j.issn.1000-3045.20231207001",
       "pdfUrl": "",
       "codeUrl": ""
     }
