@@ -4,7 +4,7 @@ window.SITE_DATA = {
     "name": "Yang Wu",
     "nameZh": "吴杨",
     "email": "wuyang2022@ia.ac.cn",
-    "portrait": "C:\\wuyang_temp\\悲催研究生\\202609教职简历\\帅照.jpg",
+    "portrait": "photo.jpg",
     "scholarUrl": "",
     "githubUrl": "",
     "cvUrl": ""
