@@ -268,6 +268,16 @@ window.SITE_DATA = {
       "codeUrl": ""
     },
     {
+      "year": "2026",
+      "title": "Large language models for social governance: An analytical framework and research agenda",
+      "authors": "Jun Hao, Jianping Li, Yang Wu, Linyuan Lv, Fang Wang, Yijun Liu, Jin Li, Jianjun Yu, Changyong Liang, Xiaolong Zheng, Zhixin Liu",
+      "venue": "National Science Review",
+      "selected": false,
+      "paperUrl": "https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwag602/8842646",
+      "pdfUrl": "",
+      "codeUrl": ""
+    },
+    {
       "year": "2024",
       "title": "Social Intelligence Enhancement Methods for LLM Agents Based on Retrieval-Augmented Generation",
       "authors": "Zhicheng Zhang, Yang Wu, Xiaolong Zheng, Daniel Dajun Zeng",
